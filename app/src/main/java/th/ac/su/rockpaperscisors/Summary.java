@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import th.ac.su.rockpaperscisors.db.AppDatabase;
+import th.ac.su.rockpaperscisors.model.User;
+import th.ac.su.rockpaperscisors.util.AppExecutors;
+
 public class Summary extends AppCompatActivity {
     TextView[] textRound = new TextView[5];
     @Override
@@ -64,6 +68,17 @@ public class Summary extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final User user = new User(0,"eiei","win","win","draw","lose","lose",5);
+
+                AppExecutors executors = new AppExecutors();
+                executors.diskIO().execute(new Runnable() {
+                    @Override
+                    public void run() { // worker thread
+                        AppDatabase db = AppDatabase.getInstance(Summary.this);
+                        db.userDao().addUser(user);
+
+                    }
+                });
                 Intent intent = new Intent(Summary.this, MainActivity.class);
                 startActivity(intent);
             }

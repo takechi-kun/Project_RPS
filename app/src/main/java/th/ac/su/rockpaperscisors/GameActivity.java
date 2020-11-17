@@ -33,12 +33,16 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
     private int indexAnswer, indexChallenge;
     private char[] result = new char[6];
     private Random random;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        Bundle bundle = getIntent().getExtras();
+        username = bundle.getString("username");
 
         roundText = findViewById(R.id.round_text);
         challengeText = findViewById(R.id.challenge_text);
@@ -142,6 +146,7 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
                     intent.putExtra("r3", result[3]);
                     intent.putExtra("r4", result[4]);
                     intent.putExtra("r5", result[5]);
+                    intent.putExtra("username", username);
                     startActivity(intent);
                 }
             }

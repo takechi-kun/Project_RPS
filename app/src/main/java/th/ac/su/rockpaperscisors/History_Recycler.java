@@ -34,7 +34,7 @@ public class History_Recycler extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        UserAdapter adapter = new UserAdapter(History_Recycler.this, users);
+                        th.ac.su.rockpaperscisors.adapter.UserAdapter adapter = new th.ac.su.rockpaperscisors.adapter.UserAdapter(History_Recycler.this, users);
                         mRecyclerView.setAdapter(adapter);
                     }
                 });

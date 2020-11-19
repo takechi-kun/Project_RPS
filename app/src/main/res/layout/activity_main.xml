@@ -24,7 +24,7 @@
         android:id="@+id/imageView5"
         android:layout_width="401dp"
         android:layout_height="115dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
@@ -33,7 +33,7 @@
 
     <Button
         android:id="@+id/play_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Play game"
         app:layout_constraintBottom_toTopOf="@+id/history_btn"
@@ -47,7 +47,7 @@
 
     <Button
         android:id="@+id/learn_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="learn"
         app:layout_constraintBottom_toBottomOf="@+id/play_btn"
@@ -59,13 +59,13 @@
 
     <Button
         android:id="@+id/history_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/learn_btn"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/play_btn"
         app:layout_constraintTop_toBottomOf="@+id/play_btn" />
 
